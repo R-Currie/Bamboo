@@ -23,6 +23,7 @@ class Instructor::CoursesController < ApplicationController
     def require_authorized_for_current_course
       if current_course.user != current_user
         render plain: "Unauthorized", status: :unauthorized
+        redirect_to course_path(current_course), alert: 'You are not the instructor of that course'
       end
     end
   
