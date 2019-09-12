@@ -14,9 +14,9 @@ class LessonsController < ApplicationController
     end
 
     def require_authorized_for_current_lesson
-      if current_course.enrolled_in? != current_course
+      if current_user.enrolled_in? current_lesson.section.course
         render plain: "Unauthorized", status: :unauthorized
-        redirect_to course_path(current_course), alert: 'You are not enrolled in that course'
+        redirect_to course_path(current_lesson.section.course), alert: 'You are not enrolled in that course'
       end
     end
 end

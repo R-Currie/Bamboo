@@ -1,5 +1,11 @@
  @import "bootstrap";
  @import url('https://fonts.googleapis.com/css?family=Raleway:200,400&display=swap');
+
+ /*
+ *= require_self
+ *= require_tree .
+ *= require jquery-ui
+ */
  
  html {
     height: 100%;
