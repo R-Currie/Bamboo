@@ -1,10 +1,12 @@
  @import "bootstrap";
  @import url('https://fonts.googleapis.com/css?family=Raleway:200,400&display=swap');
+ @import "font-awesome";
 
  /*
  *= require_self
  *= require_tree .
  *= require jquery-ui
+ *= require font-awesome
  */
  
  html {
@@ -19,6 +21,14 @@
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
     color: #BDC7C1;
+  }
+
+  ul{
+    list-style-type: none;
+  }
+
+  ul .header{
+    font-size: 25px;
   }
 
  .navbar{
@@ -141,8 +151,31 @@
     font-size: 25px;
   }
 
-  .section {
-    border: 1px solid;
-    border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  .lessons li {
+    background: black;
+    color: #BDC7C1;
+    margin: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    padding: 8px;
+    font-size: 15px;
+  }
+
+  .lessons li b {
+    font-size: 25px;
+  }
+
+  .lessons li p {
+    margin: 0;
+  }
+
+  .sections {
     padding: 20px;
+  }
+
+  .sections li{
+    border: 1px solid;
+    border-color: #e4e4e4 #bebebd #e4e4e4 #bebebd;
+    padding: 20px;
+    margin: 20px
   }
