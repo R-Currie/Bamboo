@@ -25,11 +25,11 @@ class EnrollmentsController < ApplicationController
         rescue Stripe::CardError => e
             flash[:error] = e.message
             redirect_to new_charge_path
-        end
     end
 
     private
 
     def current_course
         @current_course ||= Course.find(params[:course_id])
+    end
 end
