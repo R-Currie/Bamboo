@@ -5,17 +5,22 @@
     <hr />
 
     <% @courses.each do |course| %>
+    <div class='course-box'>
         <h2 class='text-center'><%= course.title %></h2>
-        <%= image_tag course.image.to_s, class: 'img_fluid' %>
-        <br />
-        <div class='row'>
-            <div class='col-sm-8 col-12'>
+        <div class='row text-center'>
+            <div class='col-8 offset-2'>
+                <%= image_tag course.image.to_s, class: 'img_fluid' %>
+            </div>
+            <div class='col-8 offset-2'>
+            <br />
                 <%= course.description %>
             </div>
-            <div class='col-sm-4 col-12 text-center'>
+            <div class='col-8 offset-2 text-center'>
+            <br />
                 <%= link_to 'Learn More', course_path(course), class: 'btn btn-success btn-large' %>
             </div>
         </div>
         <br class='clr'/>
+    </div>
     <% end %>
 </div>
