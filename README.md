@@ -1,24 +1,32 @@
-# README
+# Bamboo E-Commerce
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A website that allows instructors to make courses and students to enroll.
 
-Things you may want to cover:
+### Getting Started
+* Create an account
+* Make a new course if you are teaching
+* Browse and find courses to enroll if you are a student
+* Use the credit card number "4242 4242 4242 4242" and any expiration and CVV code to test the payment option
 
-* Ruby version
+### Technologies
+* Ruby 2.5.3
+* Rails 5.2.3
+* AWS
+* PostgreSQL
+* Bootstrap 4.0.0.alpha6
+* jQuery
+* Stripe
+* Devise
+* Carrierwave
+* Figaro
 
-* System dependencies
 
-* Configuration
+### Installing
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. Clone the repo
+> git clone https://github.com/R-Currie/flixnet.git
+2. Run bundle install inside project root
+> bundle install
+3. Start server
+> rails server -b 0.0.0.0 -p 3000
+4. Learn!
