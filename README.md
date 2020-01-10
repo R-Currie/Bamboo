@@ -1,5 +1,7 @@
 # Bamboo E-Commerce
 
+### [Link](https://bamboo-r-currie.herokuapp.com/) to live app
+
 A website that allows instructors to make courses and students to enroll.
 
 ### Getting Started
