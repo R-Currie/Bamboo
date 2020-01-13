@@ -12,15 +12,15 @@ A website that allows instructors to make courses and students to enroll.
 
 ### Technologies
 * Ruby 2.5.3
-* Rails 5.2.3
-* AWS
-* PostgreSQL
-* Bootstrap 4.0.0.alpha6
-* jQuery
-* Stripe
-* Devise
-* Carrierwave
-* Figaro
+* [Rails](https://rubyonrails.org/) 5.2.3
+* [AWS](https://aws.amazon.com/)
+* [PostgreSQL](https://www.postgresql.org/)
+* [Bootstrap](https://v4-alpha.getbootstrap.com/getting-started/download/) 4.0.0.alpha6
+* [jQuery](https://jquery.com/)
+* [Stripe](https://stripe.com/)
+* [Devise](https://github.com/heartcombo/devise)
+* [Carrierwave](https://github.com/carrierwaveuploader/carrierwave)
+* [Figaro](https://github.com/laserlemon/figaro)
 
 
 ### Installing
