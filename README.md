@@ -4,6 +4,9 @@
 
 A website that allows instructors to make courses and students to enroll.
 
+ ### Demo
+ ![Bamboo Demo](https://i.imgur.com/uu6JXyW.gif)
+
 ### Getting Started
 * Create an account
 * Make a new course if you are teaching
