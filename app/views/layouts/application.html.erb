@@ -65,15 +65,13 @@
         <b>Teachers</b>
         <br />
         <%= link_to 'Teach a Course', new_instructor_course_path %>
-        <br />
+        <br class="footer-extra" />
         <%= link_to 'My Dashboard', dashboard_path %>
       </div>
-      <div class="col-12 col-sm-3">
+      <div class="col-12 col-sm-3 footer-extra">
         <b>About</b>
         <br />
         <%= link_to 'Team', '#' %>
-        <br />
-        <%= link_to 'Careers', '#' %>
         <br />
         <%= link_to 'Privacy Policy', '#' %>
       </div>
@@ -81,12 +79,12 @@
         <b>Contact</b>
         <br />
         <span class="fa fa-envelope"></span> CurrieRobertM@gmail.com
-        <br />
+        <br class="footer-extra" />
         <span class="fa fa-linkedin"></span> <%= link_to "LinkedIn", "https://www.linkedin.com/in/r-currie/", :target => "_blank" %>
       </div>
       <div class="col-12 col-sm-3">
-        <b>This Project</b>
-        <br />
+        <b class="footer-extra">This Project</b>
+        <br class="footer-extra" />
         <span class="fa fa-github-square"></span> <%= link_to "Github", "https://github.com/R-Currie/Flixnet", :target => "_blank" %>
       </div>
     </div>

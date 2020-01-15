@@ -241,8 +241,16 @@ ul .header {
   height: auto;
 }
 
+.desc {
+  flex-basis: 60%;
+}
+
 @media (max-width: 800px) {
   .grid {
     flex-direction: column;
+  }
+
+  .footer-extra {
+    display: none;
   }
 }
