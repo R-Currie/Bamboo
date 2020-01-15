@@ -83,22 +83,21 @@ ul .header {
 }
 
 .course-box {
-  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
-  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
-  box-shadow: 1px 1px 2px 0 #d0d0d0;
-  background: #222222;
+  -moz-box-shadow: 2px 2px 2px 0 grey;
+  -webkit-box-shadow: 2px 2px 2px 0 grey;
+  box-shadow: 2px 2px 2px 0 grey;
+  background: #111111;
   border: 1px solid #ccc;
   border-color: #bdc7c1 #bebebd #bebebd #bdc7c1;
   padding: 10px;
   color: #bdc7c1;
   margin-top: 2.5%;
+  margin-right: 10px;
+  margin-left: 10px;
   width: auto;
 }
 
 .basic-box {
-  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
-  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
-  box-shadow: 1px 1px 2px 0 #d0d0d0;
   background: #222222;
   border: 1px solid #ccc;
   border-color: #bdc7c1 #bebebd #bebebd #bdc7c1;
