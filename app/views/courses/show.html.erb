@@ -3,28 +3,30 @@
 <div class='basic-box col-8 offset-2'>
     <h1><%= @course.title %></h1>
     <div class='row'>
-      <div class='col-10'>
+      <div class='col-12'>
         <%= image_tag @course.image.to_s, class: 'img_fluid' %>
       </div>
     <br />
-        <div class='col-2 text-center'>
-        <br />
-        <br />
-        <br />
-            <h2><span class='badge badge-success'>
-               <%= number_to_currency @course.cost %>
-            </span></h2>
+
+      <div class="grid">
+        <div class='desc'>
+            <h4><%= @course.description %></h4>
+        </div>
+        <div>
+          <h2>
+            <span class='badge badge-success'>
+            <%= number_to_currency @course.cost %>
+            </span>
+          </h2>
+        </div>
 
             <% if current_user && current_user == @course.user %>
-                <br />
                 <%= link_to 'Administer', instructor_course_path(@course), class: 'btn btn-danger btn-large' %>
             <% end %>
 
-            <br />
-            <br />
             <% if current_user %>
               <% if current_user.enrolled_in?(@course) %>
-                <h2 class="badge badge-info">You Are Enrolled!</h2>
+                <h2 class="badge badge-info" id="enrolled">You Are Enrolled!</h2>
               <% else %>
                 <% if @course.free? %>
                   <%= link_to 'Enroll', course_enrollments_path(@course), class: 'btn btn-primary', method: :post %>
@@ -43,11 +45,7 @@
               <h3 class="badge badge-info">Sign In to Enroll!</h3>
             <% end %>
           </div>
-
-        <div class='col-8'>
-            <h4><%= @course.description %></h4>
-        </div>
-    </div>
+      </div>
 
    <div class="col-12">
     <% @course.sections.rank(:row_order).each do |section| %>
