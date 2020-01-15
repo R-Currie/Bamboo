@@ -1,26 +1,28 @@
 <br />
 
 <div class='basic-box col-10 offset-1'>
-    <h1 class='text-center'>Learn something today</h1>
-    <hr />
+  <h1 class='text-center'>Learn something today</h1>
+  <hr />
 
-    <% @courses.each do |course| %>
+  <%# Cycle through all courses and display them %>
+
+  <% @courses.each do |course| %>
     <div class='course-box'>
-        <h2 class='text-center'><%= course.title %></h2>
-        <div class='row text-center'>
-            <div class='col-8 offset-2'>
-                <%= image_tag course.image.to_s, class: 'img-fluid' %>
-            </div>
-            <div class='col-8 offset-2'>
-            <br />
-                <%= course.description %>
-            </div>
-            <div class='col-8 offset-2 text-center'>
-            <br />
-                <%= link_to 'Learn More', course_path(course), class: 'btn btn-success btn-large' %>
-            </div>
+      <h2 class='text-center'><%= course.title %></h2>
+      <div class='row text-center'>
+        <div class='col-8 offset-2'>
+          <%= image_tag course.image.to_s, class: 'img-fluid' %>
         </div>
-        <br class='clr'/>
+        <div class='col-8 offset-2'>
+          <br />
+          <%= course.description %>
+        </div>
+        <div class='col-8 offset-2 text-center'>
+          <br />
+          <%= link_to 'Learn More', course_path(course), class: 'btn btn-success btn-large' %>
+        </div>
+      </div>
+      <br class='clr'/>
     </div>
-    <% end %>
+  <% end %>
 </div>

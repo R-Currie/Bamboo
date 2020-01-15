@@ -22,9 +22,13 @@
           </h2>
         </div>
 
+            <%# For teachers only %>
+
             <% if current_user && current_user == @course.user %>
                 <%= link_to 'Administer', instructor_course_path(@course), class: 'btn btn-danger btn-large' %>
             <% end %>
+
+            <%# Checks if students are enrolled %>
 
             <% if current_user %>
               <% if current_user.enrolled_in?(@course) %>
@@ -48,6 +52,8 @@
             <% end %>
           </div>
       </div>
+
+      <%# Displays sections and lessons %>
 
    <div class="col-12">
     <% @course.sections.rank(:row_order).each do |section| %>

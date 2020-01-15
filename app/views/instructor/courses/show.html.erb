@@ -1,3 +1,5 @@
+<%# Ajax function that allows drag and drop sorting of lessons %>
+
 <script>
   $(function() {
     $('.lessons').sortable({
@@ -12,6 +14,8 @@
     });
    });
 </script>
+
+<%# Ajax function that allows drag and drop sorting of sections %>
 
 <script>
   $(function() {
@@ -34,6 +38,9 @@
   <%= image_tag current_course.image.to_s, class: 'img-fluid' %>
 
   <br />
+
+  <%# Link that allows teachers to see the course as a student would  %>
+
   <%= link_to 'Preview as student', course_path(current_course), class: 'btn btn-warning float-right' %>
   <br />
   <br class='clr' />
@@ -44,6 +51,8 @@
       Add a new section...
     </button>
   </div>
+
+  <%# Displays sections and lessons %>
 
   <ul class='sections'>
     <% current_course.sections.rank(:row_order).each do |section| %>

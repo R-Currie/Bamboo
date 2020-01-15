@@ -1,6 +1,8 @@
 class Instructor::SectionsController < ApplicationController
     before_action :authenticate_user!
     before_action :require_authorized_for_current_course, only: [:create]
+
+    # Sections controller for teachers
   
     def create
       @section = current_course.sections.create(section_params)
@@ -12,6 +14,8 @@ class Instructor::SectionsController < ApplicationController
     end
   
     private
+
+    # Teacher authorization
   
     def require_authorized_for_current_course
       if current_course.user != current_user
@@ -20,6 +24,9 @@ class Instructor::SectionsController < ApplicationController
     end
   
     helper_method :current_course
+
+    # Prevents repeating code when calling current_course
+
     def current_course
       if params[:course_id]
         @current_course ||= Course.find(params[:course_id])

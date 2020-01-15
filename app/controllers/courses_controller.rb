@@ -1,11 +1,13 @@
 class CoursesController < ApplicationController
 
-    def index
-        @courses = Course.all
-    end
+  # Courses controller for students
 
-    def show
-        @course = Course.find(params[:id])
-    end
+  def index
+    @courses = Course.all
+  end
+
+  def show
+    @course = Course.find(params[:id])
+  end
 
 end

@@ -1,5 +1,7 @@
 <br />
 
+<%# Simple form to add a new lesson to a section %>
+
 <div class='basic-box col-10 offset-1'>
     <h1>Add a new lesson</h1>
     <%= simple_form_for @lesson, url: instructor_section_lessons_path(current_section) do |f| %>

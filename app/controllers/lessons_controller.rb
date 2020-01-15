@@ -8,10 +8,14 @@ class LessonsController < ApplicationController
 
     private
 
+    # Prevents repeating code when calling current_lesson
+
     helper_method :current_lesson
     def current_lesson
       @current_lesson ||= Lesson.find(params[:id])
     end
+
+    # Checks enrollment
 
     def require_authorized_for_current_lesson
       if !current_user.enrolled_in? current_lesson.section.course
